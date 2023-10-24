@@ -3,7 +3,7 @@ using Townsharp.Infrastructure.WebApi;
 
 using TownListener;
 
-UserCredential userCredential = new UserCredential(Config.Current.Username, Config.Current.Password);
+UserCredential userCredential = new UserCredential(Config.Current.Username!, String.Empty, Config.Current.Password!);
 
 WebApiUserClient webApiClient = new WebApiUserClient(userCredential);
 

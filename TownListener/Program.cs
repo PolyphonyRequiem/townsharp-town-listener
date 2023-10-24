@@ -3,6 +3,17 @@ using Townsharp.Infrastructure.WebApi;
 
 using TownListener;
 
+if (Config.Current.Username is null || Config.Current.Password is null)
+{
+    Console.WriteLine("Please enter your username:");
+    Config.Current.Username = Console.ReadLine();
+
+    Console.WriteLine("Please enter your password:");
+    Config.Current.Password = Console.ReadLine();
+
+    Config.Current.Save();
+}
+
 UserCredential userCredential = new UserCredential(Config.Current.Username!, String.Empty, Config.Current.Password!);
 
 WebApiUserClient webApiClient = new WebApiUserClient(userCredential);

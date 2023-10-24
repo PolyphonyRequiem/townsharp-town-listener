@@ -1,0 +1,8 @@
+<grammar version="1.0" xml:lang="en-US" root="command" xmlns="http://www.w3.org/2001/06/grammar">
+	<rule id="command">
+		<one-of>
+			<item>player teleport me home</item>
+			<item>player teleport me respawnpoint</item>
+		</one-of>
+	</rule>
+</grammar>

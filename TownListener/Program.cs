@@ -24,7 +24,7 @@ while (true)
     for (int i = 0; i < joinedServers.Length; i++)
     {
         var server = joinedServers[i];
-        Console.WriteLine($"{server.id}: {server.id} - {server.name}", i, server.id, server.name);
+        Console.WriteLine($"{i}: {server.id} - {server.name}");
     }
 
     Console.WriteLine("Which server do you want to connect to?");

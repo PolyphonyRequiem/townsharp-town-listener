@@ -8,18 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="grammar.txt" />
+    <None Remove="grammar.xml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="grammar.txt">
+    <Content Include="grammar.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Speech" Version="8.0.0-rc.2.23479.6" />
-    <PackageReference Include="Townsharp.Infrastructure" Version="1.0.0-preview.7" />
+    <PackageReference Include="Townsharp.Infrastructure" Version="1.0.0-preview.8" />
   </ItemGroup>
 
 </Project>

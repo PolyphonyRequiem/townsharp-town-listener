@@ -77,6 +77,8 @@ public class TownListenerSession
         }
 
         this.consoleClient = this.consoleClientFactory.CreateClient(accessRequest.Content.BuildConsoleUri(), accessRequest.Content.token!, _ => { });
+
+        await this.consoleClient.ConnectAsync(cancellation.Token);
     }
 
     void StartVoiceRecognition()
@@ -166,11 +168,7 @@ public class TownListenerSession
 
         Console.WriteLine("Raw Speech: {0} converted: {1}", text, processed);
 
-        string message = "{{\"id\":{0},\"content\":\"{1}\"}}";
-
-        string data = string.Format(message, count++, processed);
-
-        _ = this.consoleClient?.RunCommandAsync(data);
+        _ = this.consoleClient?.RunCommandAsync(processed);
     }
 
     string PreProcessVoice(string text)
